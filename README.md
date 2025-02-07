@@ -19,6 +19,7 @@ The output is two keys (one private, one public) in the format `[exponent, modul
 - Any message encrypted by the public key can be decrypted by the private key.
 - Any message encrypted by the private key can be decrypted by the public key.
 - A message encrypted by either key _cannot_ be decrypted by the same key.
+- Someone who only has the public key _cannot_ calculate the private key (at least, not in a reasonable amount of time).
 
 That's the magic of asymmetric encryption.
 
