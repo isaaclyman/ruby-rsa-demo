@@ -14,7 +14,13 @@ To generate an RSA key pair from any two prime numbers:
 
 `ruby bin/generate_keys.rb 1669 563`
 
-The output is in the format `[exponent, modulus]`.
+The output is two keys (one private, one public) in the format `[exponent, modulus]`.
+
+- Any message encrypted by the public key can be decrypted by the private key.
+- Any message encrypted by the private key can be decrypted by the public key.
+- A message encrypted by either key _cannot_ be decrypted by the same key.
+
+That's the magic of asymmetric encryption.
 
 ### Encryption
 
