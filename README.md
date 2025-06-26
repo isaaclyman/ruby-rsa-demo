@@ -10,9 +10,12 @@ Run `bundle` to install `prime` and `rspec`.
 
 ### Generation
 
-To generate an RSA key pair from any two prime numbers:
+To generate an RSA key pair from two prime numbers:
 
 `ruby bin/generate_keys.rb 1669 563`
+
+NOTE: Choose large primes. The modulus of the keypair (*n*, created by multiplying the primes together) must be larger 
+than the binary value of each byte being encoded.
 
 The output is two keys (one private, one public) in the format `[exponent, modulus]`.
 
