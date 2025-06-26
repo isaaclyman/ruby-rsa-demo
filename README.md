@@ -42,6 +42,14 @@ To decrypt a message, the arguments are `encrypted exponent modulus`:
 
 The output should be the original message.
 
+### Diffie-Hellman Key Exchange
+
+To do a Diffie-Hellman key exchange, which depends on the principles of RSA, you and another person both need to run:
+
+`ruby bin/key_exchange.rb`
+
+You'll both end up with a shared key which was never communicated in public.
+
 ## Tests
 
 Run `rspec` to run the test suite.
