@@ -1,14 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../rsa_crypto'
-
 def prompt(*args)
   print(*args)
   gets
 end
-
-exponent = ARGV[0].to_i
-modulus = ARGV[1].to_i
 
 puts "To do a key exchange, you'll need a friend to run this same script with you."
 puts "You shouldn't be able to see each other's screens."
