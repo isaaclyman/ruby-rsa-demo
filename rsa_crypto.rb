@@ -13,11 +13,15 @@ class RSACrypto
       end.pack('c*')
     end
 
+    def crypt_int(int, exponent, modulus)
+      int.pow(exponent, modulus)
+    end
+
     private
 
     def crypt_byte(byte, exponent, modulus)
       # Equivalent to `crypted = ((byte.to_i ** exponent) % modulus).to_s`
-      crypted = byte.to_i.pow(exponent, modulus).to_s
+      crypted = crypt_int(byte.to_i, exponent, modulus).to_s
       missing_chars = modulus.to_s.size - crypted.size
       '0' * missing_chars + crypted
     end
